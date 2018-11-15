@@ -11,30 +11,28 @@ var config = {
     }
 }
 
-var game = new Phaser.Game(config)
+var game = new Phaser.Game(config);
 
 function preload(){
-    this.load.image('grass', 'assets/grass.png');
-    
-    this.load.script('splash', 'states/splash.js');
+    this.load.image('grass', 'assets/images/grass.png')
 }
 
 function create(){
-    this.add.image(200, 300, 'grass');
+    this.add.image(200, 300, 'grass')
 
     scoreText = this.add.text(16, 16, 'Score: 0', {
-        fontSize: '28px', 
-        fontFamily: 'Spicy Rice', 
-        fill: '#8f8'
+        fontFamily: 'Spicy Rice',
+        fontSize: '32px', 
+        fill: '#88ff88'
     });
 
-    this.state.add('splash', splash);
-    this.state.start('splash');
-
     cursors = this.input.keyboard.createCursorKeys();
-
 }
 
 function update(){
+    if(cursors.space.isDown){
+        $('#splash').hide();
+    }
+
 
 }
