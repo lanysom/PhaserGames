@@ -37,9 +37,4 @@ function create(){
 
 function update(){
 
-    if(cursors.space.isDown){
-        // remove splash screen and start game
-
-    }
-
 }
