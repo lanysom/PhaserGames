@@ -1,5 +1,5 @@
 #splash{           
-    float: left;
+    
     position: absolute; 
     height: 600px;
     width: 400px;
@@ -21,21 +21,15 @@
 }
 
 #splash #menu{
-    /* margin: 20px; */
-    padding: 5px; 
-    background-color: red;   
-}
-
-#splash #menu div{
-    text-align: center;
+    margin: 20px 0px; 
+    text-align: center;   
 }
 
 #splash #menu a{
-    /* float: left; */
+    position: relative;
     text-decoration: none;
     text-shadow: 5px 5px #145a28;
     color: #88ff88;
     font-size: 38px;
-    /* border: 1px solid black; */
-    padding: 10px 40px 10px 40px;
+    margin: 10px 40px;
 }
