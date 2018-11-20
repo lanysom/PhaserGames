@@ -52,7 +52,9 @@ var config = {
 var game = new Phaser.Game(config);
 
 function preload(){
-    this.load.image('grass', 'assets/images/grass.png')
+    this.load.image('grass', 'assets/images/grass.png');
+
+    this.load.spritesheet('head', 'assets/image/snake_sprite.png', { frameWidth: 64, frameHeight: 64 });
 }
 
 /* create */
@@ -67,8 +69,7 @@ function create(){
 }
 
 function createSnake(game){
-    theSnake = new snake(0,0);
-    
+    snakehead = this.physics.sprite.add(100, 150, 'head');
 }
 
 function createText(game){
@@ -86,7 +87,8 @@ function update(){
 }
 
 function updateSnake(){
-    
+    theSnake.move();
+
 }
 
 function updateScore(){
